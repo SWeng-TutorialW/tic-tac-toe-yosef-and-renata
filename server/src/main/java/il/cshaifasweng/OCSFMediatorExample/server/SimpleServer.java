@@ -20,7 +20,7 @@ public class SimpleServer extends AbstractServer {
 	@Override
 	protected void handleMessageFromClient(Object msg, ConnectionToClient client) {
 		String msgString = msg.toString();
-		if (msgString.startsWith("#warning")) {
+		if (msgString.startsWith("#warning")){
 			Warning warning = new Warning("Warning from server!");
 			try {
 				client.sendToClient(warning);
@@ -37,6 +37,11 @@ public class SimpleServer extends AbstractServer {
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
+			if(SubscribersList.size() == 2)
+			{
+				Warning warning = new Warning("ready");
+				sendToAllClients(warning);
+			}
 		}
 		else if(msgString.startsWith("remove client")){
 			if(!SubscribersList.isEmpty()){
@@ -49,7 +54,7 @@ public class SimpleServer extends AbstractServer {
 			}
 		}
 	}
-	public void sendToAllClients(String message) {
+	public void sendToAllClients(Object message) {
 		try {
 			for (SubscribedClient subscribedClient : SubscribersList) {
 				subscribedClient.getClient().sendToClient(message);
