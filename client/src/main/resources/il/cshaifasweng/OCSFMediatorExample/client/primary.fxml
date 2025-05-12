@@ -9,6 +9,7 @@
    <children>
       <Label text="Welcome to tic tac toe game!" />
       <Button mnemonicParsing="false" onAction="#sendWarning" text="Play online" />
+      <Label fx:id="label2"> </Label>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

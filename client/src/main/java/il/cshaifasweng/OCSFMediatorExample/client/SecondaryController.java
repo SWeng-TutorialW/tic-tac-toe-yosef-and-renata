@@ -4,6 +4,7 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
 public class SecondaryController {
 
@@ -14,12 +15,20 @@ public class SecondaryController {
     @FXML
     private GridPane grid;
 
-    private String currentPlayer = "X";
+    private String notation;
+    private boolean isMyturn;
     private Button[][] cells = new Button[3][3];
 
     @FXML
-    public void initialize() {
+    public void initialize(){
         createBoard();
+    }
+
+    public void setMyturn(boolean myturn) {
+        this.isMyturn = myturn;
+    }
+    public void setNotation(String notation) {
+        this.notation = notation;
     }
 
     private void createBoard() {
@@ -39,10 +48,8 @@ public class SecondaryController {
 
     private void handleMove(int row, int col) {
         Button clicked = cells[row][col];
-        if (clicked.getText().isEmpty()) {
-            clicked.setText(currentPlayer);
-            // Add logic to check for win here
-            currentPlayer = currentPlayer.equals("X") ? "O" : "X";
+        if (clicked.getText().isEmpty() && this.isMyturn) {
+            clicked.setText(notation);
         }
     }
 }

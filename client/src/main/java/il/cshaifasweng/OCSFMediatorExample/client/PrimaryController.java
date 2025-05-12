@@ -8,18 +8,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 public class PrimaryController {
-
     @FXML
-	public void onWarningEvent(WarningEvent event) {
-		if(event.getWarning().getMessage().equals("ready")){
+	private Label label2;
 
-		}
-	}
+
     @FXML
     void sendWarning(ActionEvent event) {
     	/*try {
@@ -31,20 +29,7 @@ public class PrimaryController {
 		try {
 			SimpleClient client = SimpleClient.getClient();
 			client.sendToServer("add client");
-			while (true)
-			{
-
-				break;
-			}
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("secondary.fxml"));
-			Parent root = loader.load();
-
-			Stage stage = new Stage();
-			stage.setTitle("Game Board");
-			stage.setScene(new Scene(root,600,480));
-			stage.show();
-			Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-			currentStage.close();
+			label2.setText("waiting for another player...");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

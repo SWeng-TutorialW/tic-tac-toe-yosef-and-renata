@@ -8,6 +8,8 @@ import il.cshaifasweng.OCSFMediatorExample.entities.Warning;
 public class SimpleClient extends AbstractClient {
 	
 	private static SimpleClient client = null;
+	private boolean isMyturn;
+	private String notation;
 
 	private SimpleClient(String host, int port) {
 		super(host, port);
@@ -18,9 +20,13 @@ public class SimpleClient extends AbstractClient {
 		if (msg.getClass().equals(Warning.class)) {
 			EventBus.getDefault().post(new WarningEvent((Warning) msg));
 		}
-		else{
-			String message = msg.toString();
-			System.out.println(message);
+		else if (msg.getClass().equals(String.class)) {
+			if(msg.equals("X"))
+				notation = "X";
+			else if(msg.equals("O"))
+				notation = "O";
+			if(msg.equals("your turn"))
+				isMyturn = true;
 		}
 	}
 	

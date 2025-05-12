@@ -40,8 +40,6 @@ public class App extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
-    
-    
 
     @Override
 	public void stop() throws Exception {
@@ -54,15 +52,18 @@ public class App extends Application {
     
     @Subscribe
     public void onWarningEvent(WarningEvent event) {
-    	Platform.runLater(() -> {
-    		Alert alert = new Alert(AlertType.WARNING,
-        			String.format("Message: %s\nTimestamp: %s\n",
-        					event.getWarning().getMessage(),
-        					event.getWarning().getTime().toString())
-        	);
-        	alert.show();
-    	});
-    	
+        if(event.getWarning().getMessage().equals("ready")) {
+            System.out.println(event.getWarning().getMessage());
+            change_scene();
+        }
+    }
+
+    public void change_scene(){
+        try {
+            setRoot("secondary");
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
 	public static void main(String[] args) {
