@@ -21,6 +21,10 @@ public class PrimaryController {
 	private Label label2;
 	@FXML
 	private TextField ip;
+	@FXML
+	private Label portLabel;
+	@FXML
+	private TextField port;
 
 
     @FXML
@@ -33,7 +37,9 @@ public class PrimaryController {
 		}*/
 		try {
 			String ip = this.ip.getText();
-			SimpleClient client = SimpleClient.getClient(ip,3005);
+			int port = Integer.parseInt(this.port.getText());
+			SimpleClient client = SimpleClient.getClient(ip, port);
+			client.openConnection();
 			client.sendToServer("add client");
 			label2.setText("waiting for another player...");
 		} catch (IOException e) {

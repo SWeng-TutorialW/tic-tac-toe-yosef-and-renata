@@ -49,7 +49,7 @@ public class App extends Application {
     	EventBus.getDefault().unregister(this);
         client.sendToServer("remove client");
         client.closeConnection();
-		super.stop();
+        super.stop();
 	}
     
     @Subscribe
@@ -74,7 +74,10 @@ public class App extends Application {
                     client.setTurn(false);
                     controller.getStatusLabel().setText(event.getWarning().getMessage());
                 }
-                if(event.getWarning().getMessage().contains("turn")){
+                else if(event.getWarning().getMessage().contains("turn")){
+                    controller.getStatusLabel().setText(event.getWarning().getMessage());
+                }
+                else if (event.getWarning().getMessage().contains("tie")) {
                     controller.getStatusLabel().setText(event.getWarning().getMessage());
                 }
             } catch (IOException e) {

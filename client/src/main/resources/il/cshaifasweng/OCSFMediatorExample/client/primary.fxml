@@ -12,6 +12,10 @@
          <Label fx:id="ipLabel" text="Ip address: "/>
          <TextField fx:id="ip"/>
       </HBox>
+      <HBox alignment="CENTER">
+         <Label fx:id="portLabel" text="port : "/>
+         <TextField fx:id="port"/>
+      </HBox>
       <Button mnemonicParsing="false" onAction="#play" text="Play online" />
       <Label fx:id="label2"> </Label>
    </children>

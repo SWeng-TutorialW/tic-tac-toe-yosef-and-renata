@@ -6,11 +6,11 @@ import il.cshaifasweng.OCSFMediatorExample.server.ocsf.ConnectionToClient;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Random;
 
 import il.cshaifasweng.OCSFMediatorExample.entities.Warning;
 import il.cshaifasweng.OCSFMediatorExample.server.ocsf.SubscribedClient;
 
-import javax.swing.*;
 
 public class SimpleServer extends AbstractServer {
 	private static ArrayList<SubscribedClient> SubscribersList = new ArrayList<>();
@@ -27,6 +27,7 @@ public class SimpleServer extends AbstractServer {
 	@Override
 	protected void handleMessageFromClient(Object msg, ConnectionToClient client) {
 		try{
+			Random random = new Random();
 			int rand;
 			int tmp;
 			String msgString = msg.toString();
@@ -37,25 +38,24 @@ public class SimpleServer extends AbstractServer {
 				SubscribersList.add(connection);
 				this.counter++;
 				client.sendToClient("client added successfully");
+				System.out.println("client added successfully");
 				if(this.counter == 2)
 				{
-					rand = (int)(Math.random()*SubscribersList.size());
+					rand = random.nextInt(2);
 					this.turn = rand;
 					String notations = "XO";
 					ch = notations.charAt(rand);
 					message = ""+ch;
 					System.out.println("2 clients have been added");
+					System.out.println("game started");
 					Warning warning = new Warning("ready");
 					sendToAllClients(warning);
 					SubscribersList.get(0).getClient().sendToClient(message);
-					System.out.println(ch);
 					message = ""+notations.charAt(1-rand);
 					SubscribersList.get(1).getClient().sendToClient(message);
-					System.out.println(notations.charAt(1-rand));
 					SubscribersList.get(this.turn).getClient().sendToClient("your turn");
 					tmp = 1-this.turn;
 					SubscribersList.get(tmp).getClient().sendToClient("opponent's turn");
-					System.out.println(rand);
 				}
 			}
 			else if(msgString.startsWith("remove client")){
@@ -65,11 +65,6 @@ public class SimpleServer extends AbstractServer {
 							SubscribersList.remove(subscribedClient);
 							this.counter--;
 							this.gameOver = false;
-							for(int i=0; i<3; i++){
-								for(int j=0; j<3; j++){
-									this.table[i][j] = null;
-								}
-							}
 							break;
 						}
 					}
@@ -88,8 +83,18 @@ public class SimpleServer extends AbstractServer {
 				}
 				message = checkWinner();
 				if(message.contains("wins")){
+					printBoard();
+					System.out.println(message);
 					gameOver = true;
 					sendToAllClients(message);
+					restoreBoard();
+				}
+				else if(message.contains("tie")){
+					printBoard();
+					System.out.println(message);
+					gameOver = true;
+					sendToAllClients(message);
+					restoreBoard();
 				}
 			}
 		}catch (IOException e){
@@ -97,6 +102,13 @@ public class SimpleServer extends AbstractServer {
 		}
 
 
+	}
+	public void restoreBoard(){
+		for(int i=0; i<3; i++){
+			for(int j=0; j<3; j++){
+				this.table[i][j] = null;
+			}
+		}
 	}
 	public void printBoard() {
 		for (int i = 0; i < 3; i++) {
@@ -112,6 +124,7 @@ public class SimpleServer extends AbstractServer {
 		}
 	}
 	public String checkWinner(){
+		int count = 0;
 		for (int i = 0; i < 3; i++) {
 			if (this.table[i][0] != null &&
                     Objects.equals(this.table[i][0], this.table[i][1]) &&
@@ -142,7 +155,16 @@ public class SimpleServer extends AbstractServer {
                 this.table[1][1].equals(this.table[2][0])) {
 			return this.table[0][2] + " wins";
 		}
-
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				if(this.table[i][j] != null){
+					count++;
+				}
+			}
+		}
+		if(count == 9){
+			return "Its a tie!";
+		}
 		return "No winner";
 	}
 	public void sendToAllClients(Object message) {
