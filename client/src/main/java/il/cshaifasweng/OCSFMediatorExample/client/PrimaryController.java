@@ -9,17 +9,22 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 public class PrimaryController {
-    @FXML
+	@FXML
+	private Label ipLabel;
+	@FXML
 	private Label label2;
+	@FXML
+	private TextField ip;
 
 
     @FXML
-    void sendWarning(ActionEvent event) {
+    void play(ActionEvent event) {
     	/*try {
 			SimpleClient.getClient().sendToServer("#warning");
 		} catch (IOException e) {
@@ -27,7 +32,8 @@ public class PrimaryController {
 			e.printStackTrace();
 		}*/
 		try {
-			SimpleClient client = SimpleClient.getClient();
+			String ip = this.ip.getText();
+			SimpleClient client = SimpleClient.getClient(ip,3005);
 			client.sendToServer("add client");
 			label2.setText("waiting for another player...");
 		} catch (IOException e) {

@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -21,6 +22,7 @@ public class App extends Application {
 
     private static Scene scene;
     private SimpleClient client;
+    private SecondaryController controller;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -52,18 +54,33 @@ public class App extends Application {
     
     @Subscribe
     public void onWarningEvent(WarningEvent event) {
-        if(event.getWarning().getMessage().equals("ready")) {
-            System.out.println(event.getWarning().getMessage());
-            change_scene();
-        }
-    }
+        Platform.runLater(() -> {
+            try {
+                if ("ready".equals(event.getWarning().getMessage())) {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("secondary.fxml"));
 
-    public void change_scene(){
-        try {
-            setRoot("secondary");
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+                    // Use controller factory to inject the client
+                    loader.setControllerFactory(param -> new SecondaryController(client));
+
+                    Parent root = loader.load(); // This triggers controller creation
+
+                    // Now it's safe to get the controller
+                    this.controller = loader.getController();
+
+                    client.setSecondaryController(controller);
+                    scene.setRoot(root);
+                }
+                if(event.getWarning().getMessage().contains("wins")){
+                    client.setTurn(false);
+                    controller.getStatusLabel().setText(event.getWarning().getMessage());
+                }
+                if(event.getWarning().getMessage().contains("turn")){
+                    controller.getStatusLabel().setText(event.getWarning().getMessage());
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
     }
 
 	public static void main(String[] args) {
