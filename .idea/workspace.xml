@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="client:jar" />
+      <artifact name="server:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9cbfd83d-6259-45c2-87be-5d87006c40dc" name="Changes" comment="final final push">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/client_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/server_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/dependency-reduced-pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/il/cshaifasweng/OCSFMediatorExample/client/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/il/cshaifasweng/OCSFMediatorExample/client/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/il/cshaifasweng/OCSFMediatorExample/client/PrimaryController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/il/cshaifasweng/OCSFMediatorExample/client/SecondaryController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/il/cshaifasweng/OCSFMediatorExample/client/SimpleClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/il/cshaifasweng/OCSFMediatorExample/client/WarningEvent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/il/cshaifasweng/OCSFMediatorExample/client/game.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/il/cshaifasweng/OCSFMediatorExample/client/ocsf/AbstractClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/il/cshaifasweng/OCSFMediatorExample/client/ocsf/AdaptableClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/il/cshaifasweng/OCSFMediatorExample/client/ocsf/ObservableClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/il/cshaifasweng/OCSFMediatorExample/client/ocsf/ObservableSWRClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/il/cshaifasweng/OCSFMediatorExample/client/primary.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/classes/il/cshaifasweng/OCSFMediatorExample/client/secondary.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/client-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/target/original-client-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/target/classes/il/cshaifasweng/OCSFMediatorExample/entities/Warning.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/target/entities-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/client_jar/client.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/server_jar/server.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tic_tac_toe_yosef_and_renata_jar/tic-tac-toe-yosef-and-renata.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tic_tac_toe_yosef_and_renata_jar2/tic-tac-toe-yosef-and-renata.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/classes/il/cshaifasweng/OCSFMediatorExample/server/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/classes/il/cshaifasweng/OCSFMediatorExample/server/SimpleServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/classes/il/cshaifasweng/OCSFMediatorExample/server/ocsf/AbstractConnectionFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/classes/il/cshaifasweng/OCSFMediatorExample/server/ocsf/AbstractServer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/classes/il/cshaifasweng/OCSFMediatorExample/server/ocsf/AbstractServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/classes/il/cshaifasweng/OCSFMediatorExample/server/ocsf/AdaptableServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/classes/il/cshaifasweng/OCSFMediatorExample/server/ocsf/ConnectionToClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/classes/il/cshaifasweng/OCSFMediatorExample/server/ocsf/ObservableOriginatorServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/classes/il/cshaifasweng/OCSFMediatorExample/server/ocsf/ObservableServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/classes/il/cshaifasweng/OCSFMediatorExample/server/ocsf/OriginatorMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/classes/il/cshaifasweng/OCSFMediatorExample/server/ocsf/SubscribedClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/server-0.0.1-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/server-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-il.cshaifasweng.server.AppTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/surefire-reports/il.cshaifasweng.server.AppTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/target/test-classes/il/cshaifasweng/server/AppTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;asadi-yousef&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/SWeng-TutorialW/tic-tac-toe-yosef-and-renata&quot;,
+    &quot;accountId&quot;: &quot;09e41022-498c-4dcf-bd01-cf871a4324c6&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2wrrsK3e6uxs1uCznevdpLAjIni" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Maven.Client.executor": "Run",
+    "Maven.OCSFMediatorExample [clean,install].executor": "Run",
+    "Maven.Server.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Yosef",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/יוסף אסדי/IdeaProjects/tic-tac-toe-yosef-and-renata/client",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Maven.Client">
+    <configuration name="Client" type="MavenRunConfiguration" factoryName="Maven" singleton="false">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="21" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="" />
+          </MavenRunnerSettings>
+        </option>
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/client" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="OCSFMediatorExample [clean,install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="21" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="" />
+          </MavenRunnerSettings>
+        </option>
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Server" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="21" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="" />
+          </MavenRunnerSettings>
+        </option>
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="exec:java" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/server" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Maven.Server" />
+      <item itemvalue="Maven.Client" />
+      <item itemvalue="Maven.OCSFMediatorExample [clean,install]" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9cbfd83d-6259-45c2-87be-5d87006c40dc" name="Changes" comment="" />
+      <created>1746810738820</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746810738820</updated>
+      <workItem from="1746810740171" duration="2923000" />
+      <workItem from="1746862830078" duration="1296000" />
+      <workItem from="1746864586345" duration="10780000" />
+      <workItem from="1746947859104" duration="13516000" />
+      <workItem from="1746963626341" duration="2892000" />
+      <workItem from="1746981974580" duration="1222000" />
+      <workItem from="1746992561067" duration="741000" />
+      <workItem from="1746993313044" duration="1369000" />
+      <workItem from="1747034586075" duration="27691000" />
+      <workItem from="1747078124104" duration="5131000" />
+      <workItem from="1747116507764" duration="2251000" />
+      <workItem from="1747120705706" duration="3386000" />
+      <workItem from="1747128140325" duration="5381000" />
+      <workItem from="1747134463555" duration="26250000" />
+      <workItem from="1747162766003" duration="6481000" />
+      <workItem from="1747169320234" duration="835000" />
+      <workItem from="1747211888253" duration="597000" />
+      <workItem from="1747216308346" duration="3486000" />
+      <workItem from="1747221868707" duration="778000" />
+      <workItem from="1747227010708" duration="2515000" />
+    </task>
+    <task id="LOCAL‎-00001" summary="changed GUI">
+      <option name="closed" value="true" />
+      <created>1746963758932</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL‎-00001" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1746963758932</updated>
+    </task>
+    <task id="LOCAL‎-00002" summary="implemented matchmaking">
+      <option name="closed" value="true" />
+      <created>1747054752206</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL‎-00002" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1747054752206</updated>
+    </task>
+    <task id="LOCAL‎-00003" summary="aaaaaaa">
+      <option name="closed" value="true" />
+      <created>1747143394958</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL‎-00003" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1747143394958</updated>
+    </task>
+    <task id="LOCAL‎-00004" summary="final push">
+      <option name="closed" value="true" />
+      <created>1747156583819</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL‎-00004" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1747156583819</updated>
+    </task>
+    <task id="LOCAL‎-00005" summary="final push">
+      <option name="closed" value="true" />
+      <created>1747157312174</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL‎-00005" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1747157312174</updated>
+    </task>
+    <task id="LOCAL‎-00006" summary="final final push">
+      <option name="closed" value="true" />
+      <created>1747227619688</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL‎-00006" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1747227619688</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changed GUI" />
+    <MESSAGE value="implemented matchmaking" />
+    <MESSAGE value="aaaaaaa" />
+    <MESSAGE value="final push" />
+    <MESSAGE value="final final push" />
+    <option name="LAST_COMMIT_MESSAGE" value="final final push" />
+  </component>
+</project>
