@@ -9,7 +9,7 @@ import il.cshaifasweng.OCSFMediatorExample.entities.Warning;
 import java.io.IOException;
 
 public class SimpleClient extends AbstractClient {
-	
+
 	private static SimpleClient client = null;
 	private boolean isMyturn;
 	private String notation;
@@ -30,6 +30,7 @@ public class SimpleClient extends AbstractClient {
 	public String getNotation() {
 		return notation;
 	}
+
 	@Override
 	protected void handleMessageFromServer(Object msg) {
 		if (msg.getClass().equals(Warning.class)) {
@@ -72,10 +73,10 @@ public class SimpleClient extends AbstractClient {
 			}
 		}
 	}
-	
+
 	public static SimpleClient getClient() {
 		if (client == null) {
-			client = new SimpleClient("172.20.10.6", 3000);
+			client = new SimpleClient("localhost", 3000);
 		}
 		return client;
 	}
