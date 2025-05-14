@@ -23,15 +23,22 @@ public class App extends Application {
     private static Scene scene;
     private SimpleClient client;
     private SecondaryController controller;
+    private PrimaryController primaryController;
 
     @Override
     public void start(Stage stage) throws IOException {
     	EventBus.getDefault().register(this);
-    	client = SimpleClient.getClient();
-    	client.openConnection();
-        scene = new Scene(loadFXML("primary"), 600, 480);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("primary.fxml"));
+        Parent root = loader.load();
+        primaryController = loader.getController();
+        primaryController.setApp(this);
+        scene = new Scene(root,600,480);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void setClient(SimpleClient client) {
+        this.client = client;
     }
 
     static void setRoot(String fxml) throws IOException {

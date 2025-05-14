@@ -15,6 +15,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 public class PrimaryController {
+	private App app;
 	@FXML
 	private Label ipLabel;
 	@FXML
@@ -27,8 +28,8 @@ public class PrimaryController {
 	private TextField port;
 
 
-    @FXML
-    void play(ActionEvent event) {
+	@FXML
+	void play(ActionEvent event) {
     	/*try {
 			SimpleClient.getClient().sendToServer("#warning");
 		} catch (IOException e) {
@@ -39,6 +40,7 @@ public class PrimaryController {
 			String ip = this.ip.getText();
 			int port = Integer.parseInt(this.port.getText());
 			SimpleClient client = SimpleClient.getClient(ip, port);
+			app.setClient(client);
 			client.openConnection();
 			client.sendToServer("add client");
 			label2.setText("waiting for another player...");
@@ -47,14 +49,11 @@ public class PrimaryController {
 		}
 
 	}
+	public void setApp(App app) {
+		this.app = app;
+	}
 
 	@FXML
 	void initialize(){
-		/*try {
-			SimpleClient.getClient().sendToServer("add client");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
 	}
 }
